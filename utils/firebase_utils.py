@@ -4,7 +4,7 @@ import requests
 from fastapi import HTTPException
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate("FIREBASE_KEY_JSON")
+cred = credentials.Certificate("config/firebase-key.json")
 initialize_app(cred, {'storageBucket': 'login-cb7d4.appspot.com'})
 
 def generate_signed_url(file_path: str) -> str:
